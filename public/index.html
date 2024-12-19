@@ -1,0 +1,27 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/message.css">
+    
+
+</head>
+<body>
+    <div id="mensaje" class="hidden"></div>
+    
+    <h1 id="titulo" data-editable="true"></h1>
+    <p id="parrafo" data-editable="true"></p>
+
+    <button id="logoutButton" class="hidden" onclick="logout()">Cerrar Sesión</button>
+    <a href="login.html"><button id="loginButton">Ir a Login</button></a>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/message.js"></script>
+    <script src="./js/app.js"></script>
+  
+</body>
+</html>
