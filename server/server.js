@@ -28,13 +28,13 @@ app.use('/api/auth', authRoutes);
 
 
 // Conexión a la base de datos de MongoDB
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log('Conexión a MongoDB exitosa');
-  })
-  .catch((err) => {
-    console.error('Error al conectar a MongoDB', err);
-  });
+// mongoose.connect(process.env.MONGODB_URI)
+//   .then(() => {
+//     console.log('Conexión a MongoDB exitosa');
+//   })
+//   .catch((err) => {
+//     console.error('Error al conectar a MongoDB', err);
+//   });
 
 // Iniciar servidor
 app.listen(PORT, () => {
