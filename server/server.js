@@ -25,20 +25,25 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
-
-
 // Conexión a la base de datos de MongoDB
-// mongoose.connect(process.env.MONGODB_URI)
-//   .then(() => {
-//     console.log('Conexión a MongoDB exitosa');
-//   })
-//   .catch((err) => {
-//     console.error('Error al conectar a MongoDB', err);
-//   });
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('Conexión a MongoDB exitosa');
+  })
+  .catch((err) => {
+    console.error('Error al conectar a MongoDB', err);
+  });
 
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
+
+// Ruta principal para devolver el archivo index.html
+app.get('*', (req, res) => {
+  if (!req.originalUrl.startsWith('/api')) {
+      res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+  }
 });
 
 // Ruta para obtener el contenido del archivo JSON
@@ -54,7 +59,7 @@ app.get('/api/data', (req, res) => {
 });
 
 // Ruta para actualizar o agregar contenido al archivo JSON
-app.post('/api/data', (req, res) => {
+app.post('/api/data-update', (req, res) => {
   const dataPath = path.join(__dirname, '../data/data.json');
   const nuevoContenido = req.body;
 
@@ -85,9 +90,3 @@ app.post('/api/data', (req, res) => {
   });
 });
 
-// Ruta principal para devolver el archivo index.html
-app.get('*', (req, res) => {
-    if (!req.originalUrl.startsWith('/api')) {
-        res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
-    }
-});
