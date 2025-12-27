@@ -28,7 +28,7 @@ export const DEFAULT_SEO = {
             "Centro de apoyo Psicológico, social y pedagógico dedicada a impactar las comunidades a través de proyectos innovadores y sostenibles.",
         images: [
             {
-                url: `${SITE_URL}/images/logo.png`, //pendiente
+                url: `${SITE_URL}/logo.png`, //pendiente
                 width: 400,
                 height: 400,
                 alt: "Fundación PAFIR Logo",
@@ -39,11 +39,11 @@ export const DEFAULT_SEO = {
         card: "summary_large_image",
         title: "Fundación PAFIR - Amor, Formación, Inclusión y Reconciliación",
         description: "Centro de apoyo Psicológico, social y pedagógico dedicada a impactar las comunidades.",
-        images: ["/images/logo.png"],
+        images: ["/logo.png"],
     },
     icons: {
-        icon: "/images/logo.png",
-        apple: "/images/logo.png",
+        icon: "/logo.png",
+        apple: "/logo.png",
     },
 };
 

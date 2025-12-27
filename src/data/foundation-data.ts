@@ -4,7 +4,7 @@ export const foundationData: FoundationData = {
   name: "PAFIR",
   fullName: "Fundación para el Amor, la Formación, la Inclusión y la Reconciliación",
   tagline: "Centro de apoyo Psicológico, Social y Pedagógico",
-  logo: "/images/imagen1.png",
+  logo: "/imagen1.png",
   slogan:"Amor, Formación, Inclusión y Reconciliación",
   slogan2:"Juntos hacemos la diferencia",
   nav: [
